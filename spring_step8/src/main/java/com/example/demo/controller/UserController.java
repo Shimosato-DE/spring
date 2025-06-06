@@ -101,7 +101,7 @@ public class UserController {
 			}
 
 			model.addAttribute("validationError", errorList);
-			return "/user/editr";
+			return "/user/edit";
 			}
 		
 		userService.update(userUpdateRequest);
