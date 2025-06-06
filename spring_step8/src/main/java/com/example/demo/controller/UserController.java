@@ -1,19 +1,19 @@
 package com.example.demo.controller;
 
-import java.util.ArrayList;
+import java.util.ArrayList;//ArrayListインターフェイスのimport
 import java.util.List;//Listインターフェイスのimport 
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.ObjectError;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.beans.factory.annotation.Autowired;//@Autowiredを提供。DIを行う時につかう(ここではService層をDI)
+import org.springframework.stereotype.Controller;//@Controllerを提供。ControllerとしてBean化する。
+import org.springframework.ui.Model;//Modelを提供。Contorollerで受け取ったデータの保存、Viewへの受渡を行う。
+import org.springframework.validation.BindingResult;//BindingResultを提供。受信データとオブジェクトのバインド結果、及びそのオブジェクトに対して実行されたバリデーション結果を格納
+import org.springframework.validation.ObjectError;//
+import org.springframework.validation.annotation.Validated;//@Validatedを提供。バリデーション（入力チェック）機能を有効にする。BindingResult と組み合わせて使われる。
+import org.springframework.web.bind.annotation.GetMapping;//@GetMappingを提供。GETリクエストを処理するメソッドをマッピングする。
+import org.springframework.web.bind.annotation.ModelAttribute;//@Modelattributeを提供。HTTPリクエストのパラメータをJavaオブジェクトにバインドしたり、モデルにデータを追加したりする。
+import org.springframework.web.bind.annotation.PathVariable;//@PathVariableを提供。URLパスの一部をメソッドの引数として抽出する。
+import org.springframework.web.bind.annotation.PostMapping;//@PostMappingを提供。HTTP POSTリクエストを処理するメソッドをマッピングする。
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;//RedirectAttributesを提供。リダイレクト後にデータをビューに渡す。通常の Model オブジェクトはリダイレクト時に破棄されてしまうため、RedirectAttributes を使う。
 
 import com.example.demo.dto.UserRequest;
 import com.example.demo.dto.UserUpdateRequest;
