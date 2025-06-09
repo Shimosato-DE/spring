@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd"><!--DOCTYPE宣言-->
+<mapper namespace="com.example.demo.repository.UserMapper">
+    <select id="search" resultType="com.example.demo.entity.User">
+        SELECT * FROM user_table WHERE id = #{id}<!--#{id}:MyBatisのプレースホルダー。Mapperインターフェースの search メソッドに渡される引数からidの値が挿入される。-->
+    </select>
+</mapper>
+
+<!--
+mapper:
+マッパーのルート要素
+
+namespace:
+このXMLファイルがどのJavaインターフェースに対応するかを指定
+
+select:
+SELECT文を定義する要素
+
+id:
+JavaのMapperインターフェース（UserMapper）内のメソッド名と対応
+
+result:
+SQLクエリの実行結果をどのJavaオブジェクトにマッピングするかを指定
+MyBatisは、データベースの列名とJavaオブジェクトのフィールド名を比較し、自動的にマッピングを行う。
+
+
+-->
